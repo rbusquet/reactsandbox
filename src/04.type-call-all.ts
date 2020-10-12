@@ -10,6 +10,7 @@ const fns = [
 ];
 
 const callAllResult = callAll(...fns);
+// type of callAllResult is now (...args: [x: number] | [a: string, b: number]) => void
 callAllResult("1", 2);
 
 export { callAll };
