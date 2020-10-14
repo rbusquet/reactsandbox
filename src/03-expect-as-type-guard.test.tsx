@@ -5,5 +5,5 @@ test("is expect a type guard?", () => {
 
   expect(root).toBeDefined();
 
-  fireEvent.click(root as HTMLElement);
+  // fireEvent.click(root as HTMLElement);
 });
