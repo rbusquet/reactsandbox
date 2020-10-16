@@ -1,11 +1,12 @@
 import { App } from "./05-strict-mode";
-import React from "react";
+import { StrictMode } from "react";
 import { render } from "@testing-library/react";
 
 test("restrict mode", () => {
   render(
-    <React.StrictMode>
+    <StrictMode>
       <App />
-    </React.StrictMode>
+    </StrictMode>
   );
+  expect(document).toMatchInlineSnapshot();
 });

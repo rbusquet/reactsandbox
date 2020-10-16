@@ -6,7 +6,6 @@ const fns = [
   (x: number) => x,
   (s: string) => s,
   (a: string, b: number) => console.log({ a, b }),
-  () => console.log("oops"),
 ];
 
 const callAllResult = callAll(...fns);
