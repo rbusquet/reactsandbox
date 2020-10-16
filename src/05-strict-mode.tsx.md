@@ -1,3 +1,4 @@
+```ts
 import "stop-runaway-react-effects/hijack";
 
 // import React from "react";
@@ -12,3 +13,4 @@ function App() {
 }
 
 export { App };
+```
