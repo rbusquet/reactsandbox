@@ -1,4 +1,3 @@
-import * as React from "react";
 import SidebarBody from "./08-sidebarbody";
 
 export interface SidebarWithComponents extends React.FC {
