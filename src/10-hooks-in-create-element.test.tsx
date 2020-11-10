@@ -17,3 +17,7 @@ test("works inside a fragment? no", () => {
 test("works with createElement", () => {
   render(createElement(Counter));
 });
+
+test("works with JSX", () => {
+  render(<Counter />);
+});
