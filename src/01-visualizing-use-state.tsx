@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 
-import "./App.css";
-
 function InlineFunctions() {
   const [count, setCount] = useState(0);
   const [name, setName] = useState(() => localStorage.getItem("name") || "");
