@@ -3,6 +3,11 @@ import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import App from "./02-testing-portals.component";
 
+afterEach(() => {
+  const portalRoot = document.getElementById("portal-root");
+  portalRoot && portalRoot.remove();
+});
+
 test("renders in portal", () => {
   // 1. Create portal root in jsdom document
   const portalRoot = document.createElement("div");
@@ -29,6 +34,15 @@ test("renders in portal", () => {
           Hello world! I'm in a portal!
         </div>
       </div>
+      <div />
+    </body>
+  `);
+});
+
+test("won't render if portal root is not present", () => {
+  render(<App />);
+  expect(document.body).toMatchInlineSnapshot(`
+    <body>
       <div />
     </body>
   `);
